@@ -35,11 +35,11 @@ D
 * Add validations to the `User` model:
 * - must have a `name`
 * Add validations to the `Task` model:
-* - must have a 'name' and 'project_id'
+* - must have a `nam`' and `project_id``
 * Add validations to the `Project` model:
 * - must have a `name`
 * Add validations to the `User_Task` model:
-* - must have a 'end_date' and be equal to or greater than Today
+* - must have a `end_date` and be equal to or greater than Today
 
 ## CONTROLLERS
 ​​API routes 
@@ -88,5 +88,5 @@ DELETE /task/<int:id>
 EXTRA!  
 Stretch goals:
 - Search
-- 
+- Add new `progress` column 
 -
