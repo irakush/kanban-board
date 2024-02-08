@@ -11,7 +11,7 @@ Project management tool designed to help visualize work progress
 
 
 ## Models: 
-![domainmodel](./dbdiagram.svg)
+![domainmodel](./dbdiagram.png)
 
 
 ## MVP:
