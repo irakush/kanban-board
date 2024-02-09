@@ -1,49 +1,62 @@
 # PROJECT PITCH
-### Name: Kanban Board
-### Owner: Igor 
+### Project Name: Kanban Board
+### Owner: Igor Rakush
 
-### Phase and Cohort:  Phase 4
+### App description:
+Project management tool designed to help visualize work progress.
+
+### CRUD User Story
+
+As a user, I want to be able to create, read, update and delete my project tasks as well as create tasks for other users .
 
 
 
-### One sentence app description:
-Project management tool designed to help visualize work progress
+## Installation Instructions
+To download the dependencies for the frontend and backend, run:
+```
+pipenv install
+pipenv shell
+npm install --prefix client
+```
+You can run your Flask API on localhost:5555 Links to an external site. by running:
+```
+python server/app.py
+```
+You can run your React app on localhost:4000 Links to an external site. by running:
+```
+npm start --prefix client
+```
 
+## BACKEND (Flask)
 
-## Models: 
+## Data flow visualizations: 
+### ERD Database Table:
+
+The entity relationship database is illustrated here:
+
 ![domainmodel](./dbdiagram.png)
 
 
-## MVP:
-C
-R
-U
-D
 
-
-## BACKEND (API)
 ### MODELS
 * many-to-many relationship
 * A `User` has many `Task`s through `User_Task`s
-* A `Task` has many `User`s through `User_Task`s 
-* A `User_Task` belongs to a `User` and belongs to a `Task`
-* A `Project` has many `Task`s 
-* A `Task` belongs to a `Project`
+* A `Task` has many `User`s through `User_Task`s
+* A `User_Task` belongs to a `User` , `Task` and `Board`
+* * A `Board` has many `User_Task`s 
 
 
-### validations 
+### VALIDATIONS 
 * Add validations to the `User` model:
 * - must have a `name`
 * Add validations to the `Task` model:
 * - must have a `nam`' and `project_id``
-* Add validations to the `Project` model:
+* Add validations to the `Board` model:
 * - must have a `name`
 * Add validations to the `User_Task` model:
 * - must have a `end_date` and be equal to or greater than Today
 
-## CONTROLLERS
-​​API routes 
-RESTful conventions 
+## API Routes
 
 **User**
 ```
@@ -56,17 +69,6 @@ GET /user/<int:id>
 PATCH /user/<int:id>
 DELETE /user/<int:id>
 ```
-**Project**
-```
-GET /project/
-POST /project/
-```
-
-```
-GET /project/<int:id>
-PATCH /project/<int:id>
-DELETE /project/<int:id>
-```
 **Task**
 ```
 GET /task/
@@ -78,12 +80,35 @@ GET /task/<int:id>
 PATCH /task/<int:id>
 DELETE /task/<int:id>
 ```
+**Board**
+```
+GET /board/
+POST /board/
+```
+
+```
+GET /board/<int:id>
+PATCH /board/<int:id>
+DELETE /board/<int:id>
+```
+
 ## FRONTEND (REACT)
 
-## Models: 
 ![screen](./kanban_board.png)
 
-- Add Figma wireframe   
+## Component Hierarchy
+![screen](./react_comp.png)
+
+## React Routes
+
+/home: The home page displays the first board in the list.
+
+/users: This page displays a list of all users. You can create, edit and delete users on this page.
+
+/board/id: The Board page displays all user tasks for the project.
+
+
+- Add Figma wireframe
 - Which components will make requests to your API?  
 - Discribe routes
 
