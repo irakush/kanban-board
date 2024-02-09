@@ -99,6 +99,14 @@ DELETE /board/<int:id>
 ## Component Hierarchy
 ![screen](./react_comp.png)
 
+## Component Details
+
+Navbar: Navigation bar includes 'Create new board' The ability to create a new board by project. 'List Of Boards' Displays a list of all boards.
+
+Users: Serves for administration of application users. It displays a list of all users and also provides the ability to create / edit and delete a user from the application.
+
+Board: The main component where all the magic happens. .... (complete the component description)
+
 ## React Routes
 
 /home: The home page displays the first board in the list.
@@ -107,6 +115,11 @@ DELETE /board/<int:id>
 
 /board/id: The Board page displays all user tasks for the project.
 
+
+
+---
+---
+---
 
 - Add Figma wireframe
 - Which components will make requests to your API?  
