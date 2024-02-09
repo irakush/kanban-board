@@ -94,7 +94,7 @@ DELETE /board/<int:id>
 
 ## FRONTEND (REACT)
 
-![screen](./kanban_board.png)
+![screen](./kanban_board2.png)
 
 ## Component Hierarchy
 ![screen](./react_comp.png)
