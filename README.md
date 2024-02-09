@@ -80,6 +80,9 @@ DELETE /task/<int:id>
 ```
 ## FRONTEND (REACT)
 
+## Models: 
+![screen](./kanban_board.png)
+
 - Add Figma wireframe   
 - Which components will make requests to your API?  
 - Discribe routes
