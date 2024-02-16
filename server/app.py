@@ -2,6 +2,8 @@ from models import db, User, Task, UserTask, Board
 from flask_restful import Api, Resource
 from flask_migrate import Migrate
 from flask import Flask, make_response, jsonify, request
+from flask_cors import CORS
+
 import os
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
@@ -18,6 +20,7 @@ migrate = Migrate(app, db)
 db.init_app(app)
 
 api = Api(app)
+CORS(app)
 
 
 @app.route("/")
@@ -161,7 +164,7 @@ def boards():
         try:
             form_data = request.get_json()
 
-            new_board = board(name=form_data["name"])
+            new_board = Board(name=form_data["name"])
 
             db.session.add(new_board)
             db.session.commit()
